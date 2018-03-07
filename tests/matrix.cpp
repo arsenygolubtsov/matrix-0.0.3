@@ -90,19 +90,19 @@ TEST_CASE("mul matrix")
 {
     std::string input1{
         "3, 3\n"
-        "3 1 -2\n"
-        "3 -2 4\n"
-        "-3 5 -1" }; 
+        "1 2 3\n"
+        "1 2 3\n"
+        "1 2 3" }; 
     std::string input2{
         "3, 3\n"
-        "2 1 0\n"
-        "1 1 2\n"
-        "-1 2 1" };
+        "1 1 1\n"
+        "2 2 2\n"
+        "3 3 3" };
     std::string input3{
         "3, 3\n"
-        "9 0 0\n"
-        "0 9 0\n"
-        "0 0 9" };
+        "11 11 11\n"
+        "11 11 11\n"
+        "11 11 11" };
     matrix_t matrix1, matrix2, matrix3;   
     std::istringstream istream1{ input1 };
     std::istringstream istream2{ input2 };
