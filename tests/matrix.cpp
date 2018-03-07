@@ -29,3 +29,36 @@ TEST_CASE("reading matrix")
     
     REQUIRE( input == ostream.str() );
 }
+
+TEST_CASE("add matrix")
+{
+    std::string input1{
+        "3, 3\n"
+        "1 2 3\n"
+        "4 5 6\n"
+        "7 8 9" }; 
+    std::string input2{
+        "3, 3\n"
+        "9 8 7\n"
+        "6 5 4\n"
+        "3 2 1" };
+    std::string input3{
+        "3, 3\n"
+        "10 10 10\n"
+        "10 10 10\n"
+        "10 10 10" };
+    
+    matrix_t matrix1, matrix2, matrix3;   
+    std::istringstream istream1{ input1 };
+    std::istringstream istream2{ input2 };
+    
+    matrix1.read( istream1 );
+    matrix2.read( istream2 );
+    
+    matrix3 = matrix1 + matrix2;
+    
+    std::ostringstream ostream;
+    matrix3.write( ostream );
+    
+    REQUIRE( input3 == ostream.str() );
+}
