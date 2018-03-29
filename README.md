@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/arsenygolubtsov/matrix_example.svg?branch=master)](https://travis-ci.org/arsenygolubtsov/matrix_example)
+[![Build Status](https://travis-ci.org/arsenygolubtsov/matrix-0.0.3.svg?branch=master)](https://travis-ci.org/arsenygolubtsov/matrix-0.0.3)
 
 ```
 cmake -H. -B_builds -DBUILD_TESTS=ON -DBUILD_EXAMPLES=ON
