@@ -139,7 +139,7 @@ TEST_CASE("cheking sub matrix")
     std::string input1{
         "2, 3\n"
         "1 2 3\n"
-        "4 5 6\" }; 
+        "4 5 6" }; 
     std::string input2{
         "3, 3\n"
         "0 1 2\n"
