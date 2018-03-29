@@ -104,6 +104,7 @@ TEST_CASE("cheking add matrix")
     matrix1.read( istream1 );
     matrix2.read( istream2 );
     REQUIRE_THROWS_AS((matrix1+matrix2), std::invalid_argument);
+}
 
 TEST_CASE("sub matrix")
 {
@@ -150,8 +151,8 @@ TEST_CASE("cheking sub matrix")
     matrix1.read( istream1 );
     matrix2.read( istream2 );
     REQUIRE_THROWS_AS((matrix1-matrix2), std::invalid_argument);
+}
         
-
 TEST_CASE("mul matrix")
 {
     std::string input1{
@@ -196,8 +197,8 @@ TEST_CASE("cheking mul matrix")
     matrix1.read( istream1 );
     matrix2.read( istream2 );
     REQUIRE_THROWS_AS((matrix1*matrix2), std::invalid_argument);
+}
     
-
 TEST_CASE("selfadd matrix")
 {
     std::string input1{
@@ -215,7 +216,6 @@ TEST_CASE("selfadd matrix")
         "10 10 10\n"
         "10 10 10\n"
         "10 10 10" };
-   ;
     matrix_t<int> matrix1, matrix2, matrix3;   
     std::istringstream istream1{ input1 };
     std::istringstream istream2{ input2 };
@@ -244,9 +244,8 @@ TEST_CASE("cheking selfadd matrix")
     matrix1.read( istream1 );
     matrix2.read( istream2 );
     REQUIRE_THROWS_AS((matrix1+=matrix2), std::invalid_argument);
+}
     
-        
-
 TEST_CASE("selfsub matrix")
 {
     std::string input1{
@@ -292,6 +291,7 @@ TEST_CASE("cheking selfsub matrix")
     matrix1.read( istream1 );
     matrix2.read( istream2 );
     REQUIRE_THROWS_AS((matrix1-=matrix2), std::invalid_argument);
+}
 
 TEST_CASE("selfmul matrix")
 {
@@ -337,5 +337,6 @@ TEST_CASE(" cheking selfmul matrix")
     matrix1.read( istream1 );
     matrix2.read( istream2 );
     REQUIRE_THROWS_AS((matrix1*=matrix2), std::invalid_argument);
+}
         
 
