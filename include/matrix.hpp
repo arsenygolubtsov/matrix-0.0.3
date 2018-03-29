@@ -143,7 +143,7 @@ matrix_t<T> matrix_t<T>::operator -( matrix_t const & other ) const
 template <typename T>
 matrix_t<T> matrix_t<T>::operator *( matrix_t const & other ) const
 {
-	matrix_t result;
+	matrix_t<T> result;
 	if (collumns_ == other.rows_) {
 		result.rows_ = rows_;
 		result.collumns_ = other.collumns_;		
