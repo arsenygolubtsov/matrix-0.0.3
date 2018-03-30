@@ -4,7 +4,7 @@
 
 #include "matrix.hpp"
 
-TEST_CASE("creating matrix")
+TEST_CASE("creating matrix") 
 {
     matrix_t<int> matrix;
     REQUIRE( matrix.rows() == 0 );
