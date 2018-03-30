@@ -87,7 +87,7 @@ std::size_t matrix_t<T>::rows() const
 }
 
 template <typename T>
-std::size_t matrix_t<T>::collumns() const
+std::size_t matrix_t<T>::collumns() const 
 {
     return collumns_;
 }
