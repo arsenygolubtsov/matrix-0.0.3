@@ -110,7 +110,7 @@ matrix_t<T> matrix_t<T>::operator +( matrix_t const & other ) const
 		}
 	}
 	else {
-		std::cerr << "An error has occured while reading input data";
+		throw std::invalid_argument("exeption");
 	}
 
 	return result;
@@ -134,7 +134,7 @@ matrix_t<T> matrix_t<T>::operator -( matrix_t const & other ) const
 		}
 	}
 	else {
-		std::cerr << "An error has occured while reading input data";
+		throw std::invalid_argument("exeption");
 	}
 
 	return result;
@@ -162,7 +162,7 @@ matrix_t<T> matrix_t<T>::operator *( matrix_t const & other ) const
 		}
 	}
 	else {
-		std::cerr << "An error has occured while reading input data";	
+		throw std::invalid_argument("exeption");
 	}
 
 	return result;
@@ -179,7 +179,7 @@ matrix_t<T> & matrix_t<T>::operator -=( matrix_t const & other )
 		}
 	}
 	else {
-		std::cerr << "An error has occured while reading input data";
+		throw std::invalid_argument("exeption");
 	}
 	return *this;
 }
@@ -195,7 +195,7 @@ matrix_t<T> & matrix_t<T>::operator +=( matrix_t const & other )
 		}
 	}
 	else {
-		std::cerr << "An error has occured while reading input data";
+		throw std::invalid_argument("exeption");
 	}
 	return *this;
 }
@@ -223,7 +223,7 @@ matrix_t<T> & matrix_t<T>::operator *=( matrix_t const & other )
 		*this = result;
 	}
 	else {
-		std::cerr << "An error has occured while reading input data";	
+		throw std::invalid_argument("exeption");
 	}
 	return *this;
 }
